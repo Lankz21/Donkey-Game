@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Donkey Game</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to CSS file -->
+    <style>
+        /* Add CSS styling here */
+        /* This is a simple example - you can expand and style it as needed */
+        .game-container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .player-info {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="game-container">
         <h1>Donkey Game</h1>
-        <div class="players">
-            <div class="player" id="player1">
-                <h2>Player 1</h2>
-                <ul id="hand1" class="hand"></ul>
-            </div>
-            <div class="player" id="player2">
-                <h2>Player 2</h2>
-                <ul id="hand2" class="hand"></ul>
-            </div>
-        </div>
+        <div class="player-info" id="player1-info"></div>
+        <div class="player-info" id="player2-info"></div>
+        <!-- Add more player-info divs as needed -->
     </div>
 
-    <script src="donkey-game.js"></script> <!-- Link to your Donkey Game JavaScript file -->
-    <script src="script.js"></script> <!-- Link to JavaScript for interactions -->
+    <script src="donkey-game.js"></script>
+    <script>
+        // Use this script section to interact with the game logic and update the HTML
+
+        // Example: Access the player information and update the HTML
+        const player1Info = document.getElementById('player1-info');
+        const player2Info = document.getElementById('player2-info');
+
+        player1Info.innerText = `Player 1: ${players[0].hand.length} cards`;
+        player2Info.innerText = `Player 2: ${players[1].hand.length} cards`;
+        // Add more similar updates for other players as needed
+    </script>
 </body>
 </html>
